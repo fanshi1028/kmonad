@@ -84,7 +84,7 @@
 
           # Just the executables for the default compiler:
           default = pkgs.haskell.lib.justStaticExecutables
-            (derivation pkgs pkgs.haskellPackages);
+            (derivation pkgs pkgs.haskell.ghc9122.packages);
         } // (pkgs.lib.optionalAttrs pkgs.stdenv.hostPlatform.isDarwin {
           list-keyboards = pkgs.stdenv.mkDerivation {
             name = "list-keyboards";
